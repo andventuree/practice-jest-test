@@ -105,7 +105,18 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   // Override the current require with this new one
   return newRequire;
 })({"src/App.js":[function(require,module,exports) {
+"use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.hello = void 0;
+
+var hello = function hello() {
+  return "Hello";
+};
+
+exports.hello = hello;
 },{}],"src/index.js":[function(require,module,exports) {
 "use strict";
 
@@ -137,7 +148,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57648" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57693" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
